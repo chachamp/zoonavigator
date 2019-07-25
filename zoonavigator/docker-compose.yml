@@ -1,0 +1,17 @@
+version: '3'
+services: 
+  zoo-web:
+    images: elkozmon/zoonavigator-web:latest
+    container_name: zoo-web
+    build: ./zoonavigator-web
+    restart: always
+    ports:
+      - "8010:8000"
+  zoo-api:
+    images: elkozmon/zoonavigator-api:latest
+    container_name: zoo-api
+    build: ./zoonavigator-api
+    restart: always
+    ports:
+      - "9000:9000"
+    
